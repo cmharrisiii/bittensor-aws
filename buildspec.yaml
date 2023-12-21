@@ -23,5 +23,3 @@ phases:
 
 artifacts:
   files: imagedefinitions.json
-
-  docker build -t 362787105273.dkr.ecr.us-east-1.amazonaws.com/bittensor-api:latest .
