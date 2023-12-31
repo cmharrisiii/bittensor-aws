@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.12.1
+FROM public.ecr.aws/docker/library/python:3.11.6
 
 # Set the working directory in the container
 WORKDIR /app
