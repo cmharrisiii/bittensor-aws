@@ -10,7 +10,7 @@ phases:
       - echo Building the Docker image...
       - cd ./core
       - docker build -t bittensor-api .
-      - docker tag bittensor-api:latest 362787105273.dkr.ecr.us-east-1.amazonaws.com/bittensor-api:$CODEBUILD_RESOLVED_SOURCE_VERSION
+      - docker tag bittensor-api:latest 362787105273.dkr.ecr.us-east-1.amazonaws.com/bittensor-api:latest
   post_build:
     commands:
       - echo Build completed on `date`
@@ -18,9 +18,9 @@ phases:
       - aws --version
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 362787105273.dkr.ecr.us-east-1.amazonaws.com
       - echo Pushing the Docker images...
-      - docker push 362787105273.dkr.ecr.us-east-1.amazonaws.com/bittensor-api:$CODEBUILD_RESOLVED_SOURCE_VERSION
+      - docker push 362787105273.dkr.ecr.us-east-1.amazonaws.com/bittensor-api:latest
       - echo Writing image definitions file...
-      - printf '[{"name":"fast-api","imageUri":"%s"}]' 362787105273.dkr.ecr.us-east-1.amazonaws.com/bittensor-api:$CODEBUILD_RESOLVED_SOURCE_VERSION > imagedefinitions.json
+      - printf '[{"name":"fast-api","imageUri":"%s"}]' 362787105273.dkr.ecr.us-east-1.amazonaws.com/bittensor-api:latest > imagedefinitions.json
 
 artifacts:
   files: ./imagedefinitions.json
