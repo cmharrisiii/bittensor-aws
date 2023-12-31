@@ -23,4 +23,4 @@ phases:
       - printf '[{"name":"fast-api","imageUri":"%s"}]' 362787105273.dkr.ecr.us-east-1.amazonaws.com/bittensor-api:latest > ./core/imagedefinitions.json
 
 artifacts:
-  files: imagedefinitions.json
+  files: ./core/imagedefinitions.json
