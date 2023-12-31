@@ -9,7 +9,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - cd ./core
-      - docker build -t bittensor-api .
+      - docker buildx build --platform=linux/arm64 -t bittensor-api .
       - docker tag bittensor-api:latest 362787105273.dkr.ecr.us-east-1.amazonaws.com/bittensor-api:latest
   post_build:
     commands:
