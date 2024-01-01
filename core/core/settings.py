@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-svm8k0a(g-2#$#5_fplm&v3%*q@cy!uc#avy^^)f^585yxyy@q
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'bittensor-api-nlb-ec3983c3dcd9cddb.elb.us-east-1.amazonaws.com'
+    'bittensor-api-nlb-ec3983c3dcd9cddb.elb.us-east-1.amazonaws.com',
+    'localhost',
+    '127.0.0.1'
 ]
 
 
