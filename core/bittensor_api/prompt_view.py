@@ -5,10 +5,10 @@ from rest_framework.decorators import api_view
 @api_view(['GET'])
 def prompting(request):
     #pull data from third party rest api
-    response = requests.get('https://jsonplaceholder.typicode.com/users')
     #convert reponse data into json
-    users = response.json()
-    return Response(users)
+    return Response({
+        'authenticated':True
+    })
 
 @api_view(['GET'])
 def getTaskStatus(request,id):
