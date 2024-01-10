@@ -3,7 +3,7 @@ from bittensor_api import prompt_view
 from bittensor_api import wikitensor_view
 from bittensor_api import authorize_view
 authorizeUrl = [
-    path('/authorize',authorize_view.authroize)
+    path('/authorize',authorize_view.index,name='index')
 ]
 
 propmptingUrl = [

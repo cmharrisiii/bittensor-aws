@@ -1,0 +1,15 @@
+<div id="main" style="font-weight: 500; color: gray; margin: auto"></div>
+<script>
+  const hash = window.location.hash?.replace("#id_token", "id_token");
+  const pairs = hash.split("&");
+  // Create an object to store the key-value pairs
+  const queryParams = {};
+  // Iterate over the pairs and populate the object
+  pairs.forEach((pair) => {
+    const [key, value] = pair.split("=");
+    const item = document.createElement("p")
+    item.innerHTML = `\n ${key}\t:\t${value} \n`
+    document.getElementById("main").append(item);
+    queryParams[key] = value || "";
+  });
+</script>
