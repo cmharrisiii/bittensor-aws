@@ -18,7 +18,7 @@ def getTaskStatus(request,id):
 @api_view(['GET'])
 def getTaskResult(request,id):
     #pull data from third party rest api
-    response = requests.get('https://jsonplaceholder.typicode.com/users')
+    response = requests.get('https://7d36-157-97-134-115.ngrok-free.app/')
     #convert reponse data into json
     users = response.json()
     return Response(users)
