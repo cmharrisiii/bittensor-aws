@@ -28,7 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'bittensor-api-nlb-ec3983c3dcd9cddb.elb.us-east-1.amazonaws.com',
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
+    'prod-northtensor-nlb-04e19095be64306b.elb.us-east-1.amazonaws.com'
 ]
 
 
